@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        function centuryFromYear(year) {
+            //variables init
+            let date = year.toString();
+            let lengthOfString = date.length;
+            //console.log(`The date is: ${date}`);
+            //console.log(`the number of characters in the year is: ${lengthOfString}`);
+
+            if(lengthOfString >= 4){
+                let century = year.toString().charAt(0) + year.toString().charAt(1) + 0 + 0;
+                //console.log(`The variable century is: ${century}`);
+                if( year > century){
+                    let num = Number(year.toString().charAt(0) + year.toString().charAt(1));
+                    return(num+1);
+                } else{
+                    let num = Number(year.toString().charAt(0) + year.toString().charAt(1));
+                    return num;  
+                }
+
+            } else {
+                let century = year.toString().charAt(0) + year.toString().charAt(1) + 0 ;
+                //console.log(`The variable century is: ${century}`);
+                if( year > century){
+                    let num = Number(year.toString().charAt(0));
+                    return(num+1);
+                } else{
+                    let num = Number(year.toString().charAt(0));
+                    return num;  
+                }
+
+            }
+            
+
+
+           
+
+        }
+
+
+
+        console.log(centuryFromYear(2017));
+        console.log(centuryFromYear(2000));
+        console.log(centuryFromYear(1789));
+        console.log(centuryFromYear(102));
+        console.log(centuryFromYear(1589));
+        console.log(centuryFromYear(258));
+        
+
+
+    </script>
+</body>
+
+</html>
